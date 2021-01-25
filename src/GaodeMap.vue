@@ -320,12 +320,23 @@ export default {
 
         /**
          * 移除全部覆盖物
+         * @param {array} list 需要删除的覆盖物ID
          */
-        removeMarkers() {
-            for (let id in this.markerList) {
-                this.markerList[id].onDestroy()
+        removeMarkers(list) {
+            if( Array.isArray( list ) ) {
+                for ( let id of list ) {
+                    let marker = this.getMarker( id )
+                    if( marker ) {
+                        marker.onDestroy()
+                        delete this.markerList[id]
+                    }
+                }
+            } else {
+                for (let id in this.markerList) {
+                    this.markerList[id].onDestroy()
+                }
+                this.markerList = {}
             }
-            this.markerList = {}
         },
 
         /**
