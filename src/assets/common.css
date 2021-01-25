@@ -1,0 +1,42 @@
+.vf-map-container {
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.vf-map-window {
+    overflow: hidden;
+}
+
+.vf-map-container .amap-info-close {
+    right: 6px !important;
+}
+
+.vf-map-container .amap-info-outer {
+    padding: 0;
+}
+
+.vf-map-search {
+    position: absolute;
+    padding: 6px;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    left: 12px;
+    top: 12px;
+}
+
+.vf-map-search input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 12px;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 12px;
+}
